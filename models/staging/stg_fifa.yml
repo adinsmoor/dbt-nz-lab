@@ -19,3 +19,16 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: stg_player
+    description: "This is a staging table for players"
+    columns:
+      - name: player_id
+        description: "This is the primary key column"
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+        description: "This is the player first and last name"
+        tests:
+          - not_null
