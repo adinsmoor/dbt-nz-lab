@@ -12,18 +12,19 @@ models:
           - not_null
   
   - name: stg_player
-    description: ""
+    description: "this is a plater"
     columns:
       - name: player_id
+        description: " this is a primary key"
         tests:
           - unique
           - not_null
-
-      - name: weight
-        description: "in KGs"
-
-      - name: height
-        description: "in CMs"
+      - name: age
+        tests:
+          - not_null
+      - name: player_name
+        tests:
+          - not_null
 
   - name: stg_team
     description: ""
