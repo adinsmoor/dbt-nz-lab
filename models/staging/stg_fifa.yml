@@ -10,7 +10,6 @@ models:
         tests:
           - unique
           - not_null
-  
 
   - name: stg_team
     description: ""
@@ -18,4 +17,15 @@ models:
       - name: team_id
         tests:
           - unique
+          - not_null
+
+  - name: stg_player
+    description: "Football player"
+    columns:
+      - name: player_id
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+        tests:
           - not_null
