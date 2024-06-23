@@ -3,6 +3,18 @@ version: 2
 models:
   - name: event
 
+  - name: stg_player
+    description: "This is a staging table for player"
+    columns:
+        - name: player_id
+          description: "This is the primary key column"
+          tests:
+            - unique
+            - not_null
+        - name: player_name
+          tests:
+            - not_null
+
   - name: stg_event_type
     description: ""
     columns:
