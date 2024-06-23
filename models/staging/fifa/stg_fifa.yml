@@ -10,12 +10,22 @@ models:
         tests:
           - unique
           - not_null
-  
 
   - name: stg_team
     description: ""
     columns:
       - name: team_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_player
+    description: "Staging table for the player object"
+
+    columns:
+      - name: player_id
+        description: "Unique id for each player"
+      - name: player_name
         tests:
           - unique
           - not_null
