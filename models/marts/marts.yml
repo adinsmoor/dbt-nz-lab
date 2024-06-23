@@ -9,3 +9,17 @@ models:
         - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
+
+  - name: dim_payers
+    description: "This is a table with players and their team names"
+    columns:
+      - name: age
+        description: "Players age"
+        tests:
+          - not_null
+      - name: team_name
+        description: "Players team name"
+        tests:
+          - not_null
+          
+          
