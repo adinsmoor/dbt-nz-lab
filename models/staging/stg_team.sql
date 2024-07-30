@@ -9,3 +9,5 @@ select
     , affiliation_id
 from team
 
+
+
