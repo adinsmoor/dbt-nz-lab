@@ -1,3 +1,4 @@
+
 with team as (
     select * from {{ source('fifa', 'team') }}
 )
