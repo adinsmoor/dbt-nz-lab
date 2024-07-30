@@ -1,6 +1,17 @@
 version: 2
 
 models:
+  - name: stg_player
+    description: this is a staging model for player
+    columns:
+      - name: age
+        tests:
+          - not_null
+      - name: player_name
+        tests:
+          - not_null
+      - name: player_id
+        description: This is the primary key
   - name: event
 
   - name: stg_event_type
