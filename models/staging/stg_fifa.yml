@@ -19,3 +19,21 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: stg_player
+    description: |
+      FIFA Player details, including first names
+    columns:
+      - name: player_id
+        description: Uniquely identifies a player
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+        description: Player's formal name and surname.
+        tests:
+          - not_null
+      - name: player_age
+        description: Player's age as at the opening date of the FIFA 2018
+        tests:
+          - not_null
