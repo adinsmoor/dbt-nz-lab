@@ -9,3 +9,6 @@ models:
         - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
+
+  - name: dim_players
+    description: "Contains player details and the team they play for."

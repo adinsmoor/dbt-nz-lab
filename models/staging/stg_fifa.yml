@@ -4,7 +4,7 @@ models:
   - name: event
 
   - name: stg_event_type
-    description: ""
+    description: "Contains type of events within a match."
     columns:
       - name: event_type_id
         tests:
@@ -13,9 +13,26 @@ models:
   
 
   - name: stg_team
-    description: ""
+    description: "Contains team details."
     columns:
       - name: team_id
         tests:
           - unique
+          - not_null
+
+  - name: stg_fifa_player
+    description: "Contains player details."
+    columns:
+      - name: player_id
+        description: "Unique ID for players."
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+        description: "Full name (first and last name) of player."
+        tests:
+          - not_null
+      - name: age
+        description: "Age of player at start date of 2018-06-14"
+        tests:
           - not_null
