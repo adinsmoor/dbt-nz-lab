@@ -1,0 +1,27 @@
+models:
+  - name: stg_player
+    description: This model processes and transforms player data from the FIFA source, providing key attributes such as player identification, personal details, and affiliations for further analysis.
+    columns:
+      - name: player_id
+        description: A unique identifier for each player.
+      - name: player_name
+        description: The full name of the player, combining first and last names.
+        tests:
+          - not_null
+      - name: birth_date
+        description: The birth date of the player.
+      - name: age
+        description: The age of the player as of June 14, 2018.
+        tests:
+          - not_null
+          
+      - name: weight
+        description: The weight of the player.
+      - name: height
+        description: The height of the player.
+      - name: city
+        description: The city associated with the player.
+      - name: national_team_affiliation_id
+        description: The identifier for the player's national team affiliation.
+      - name: affiliation_id
+        description: The identifier for the player's club or other affiliation.
