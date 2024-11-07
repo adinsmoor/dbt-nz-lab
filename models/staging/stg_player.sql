@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 with players as (
     select * from {{ source('fifa', 'player') }}
 )
