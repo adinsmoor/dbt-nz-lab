@@ -1,0 +1,25 @@
+models:
+  - name: stg_player
+    columns:
+      - name: player_id
+        data_tests:
+          - unique
+          - not_null
+      - name: player_first_name
+        data_tests:
+          - not_null
+      - name: player_middle_name
+      - name: player_last_name
+        data_tests:
+          - not_null
+      - name: player_known_name
+      - name: player_name
+        data_tests:
+          - not_null
+      - name: age
+      - name: birth_date
+      - name: weight
+      - name: height
+      - name: city
+      - name: national_team_affiliation_id
+      - name: affiliation_id
