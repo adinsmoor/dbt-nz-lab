@@ -5,7 +5,23 @@ models:
     columns:
       - name: event_pk
         tests:
-        - not_null
-        - unique
+          - not_null
+          - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
+
+  - name: dim_players
+    columns:
+      - name: player_id
+        description: The id of the player
+        data_tests:
+          - unique
+          - not_null
+      - name: country_code
+        description: Short code to identify the country code for the team
+        data_tests:
+          - not_null
+      - name: team_name
+        description: The name of the team
+        data_tests:
+          - not_null
