@@ -21,4 +21,16 @@ with stg_event as (
     left join stg_event_type on stg_event.event_type_id = stg_event_type.event_type_id
 )
 
+
+
+
+models
+/
+marts
+/
+fct_events.sql
+
+Save
+123456789101112131415161718192021222324$0
+
 select * from final 
