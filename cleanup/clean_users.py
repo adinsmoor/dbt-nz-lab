@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 def get_nondbt_users(host: str, account_id: int, api_key: str) -> list[dict]:
     """
-    Query the dbt Cloud API and return the users without '@dbtlabs.com' in their email.
+    Query the dbt Cloud API and return the users without '@dbtlabs.com' and '@fishtownanalytics.com' in their email.
     
     Args:
         host (str): The dbt Cloud Host, e.g., cloud.getdbt.com or emea.dbt.com
@@ -16,7 +16,7 @@ def get_nondbt_users(host: str, account_id: int, api_key: str) -> list[dict]:
         api_key (str): The API Key for the dbt Cloud Account, can be a User key or Service token
     
     Returns:
-        list[dict]: The list of users whose emails do not contain '@dbtlabs.com'
+        list[dict]: The list of users whose emails do not contain '@dbtlabs.com' and '@fishtownanalytics.com'
     """
     headers = {"Authorization": f"Bearer {api_key}"}
     url = f"https://{host}/api/v3/accounts/{account_id}/users/?limit=100&order_by=last_login"
@@ -40,7 +40,7 @@ def get_nondbt_users(host: str, account_id: int, api_key: str) -> list[dict]:
         if '@dbtlabs.com' not in user.get('email', '') and '@fishtownanalytics.com' not in user.get('email', '')
         for permission in user.get('permissions', [])
     ]
-    logging.info(f"Number of users retrieved without '@dbtlabs.com' in their email: {len(filtered_users)}")
+    logging.info(f"Number of users retrieved without '@dbtlabs.com' and '@fishtownanalytics.com' in their email: {len(filtered_users)}")
     return filtered_users
 
 def deactivate_user(user_id: int, permission_id: int, account_id: int, api_key: str, host: str) -> dict:

@@ -5,7 +5,7 @@ This Python script is designed to interact with the dbt Cloud API to retrieve a 
 
 ## Features
 
-- **Retrieve Users**: Fetches users from a specified dbt Cloud account and filters out those with emails that do not contain '@dbtlabs.com'.
+- **Retrieve Users**: Fetches users from a specified dbt Cloud account and filters out those with emails that do not contain '@dbtlabs.com' and '@fishtownanalytics.com'.
 - **Deactivate Users**: Automatically deactivates filtered users in the dbt Cloud account.
 
 ## Prerequisites
