@@ -37,10 +37,9 @@ def get_nondbt_users(host: str, account_id: int, api_key: str) -> list[dict]:
             'email': user['email']
         }
         for user in users.get('data', [])
-        if '@dbtlabs.com' not in user.get('email', '')
+        if '@dbtlabs.com' not in user.get('email', '') and '@fishtownanalytics.com' not in user.get('email', '')
         for permission in user.get('permissions', [])
     ]
-    
     logging.info(f"Number of users retrieved without '@dbtlabs.com' in their email: {len(filtered_users)}")
     return filtered_users
 

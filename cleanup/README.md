@@ -30,7 +30,7 @@ Before using this script, ensure you have:
 Run the script by executing:
 
 ```bash
-python script_name.py --host "your-dbt-cloud-host.com" --api-key "your_api_key" --account-id 123456
+python clean_users.py --host "your-dbt-cloud-host.com" --api-key "your_api_key" --account-id 123456
 ```
 
 Replace the following with your own values:
