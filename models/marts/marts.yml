@@ -9,3 +9,14 @@ models:
         - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
+  
+  - name: dim_players
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+          - unique
+      - name: affiliation_id
+        tests:
+          - not_null
+              

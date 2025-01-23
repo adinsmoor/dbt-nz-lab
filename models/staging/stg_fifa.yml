@@ -4,7 +4,7 @@ models:
   - name: event
 
   - name: stg_event_type
-    description: ""
+    description: "Event type metadata"
     columns:
       - name: event_type_id
         tests:
@@ -13,7 +13,7 @@ models:
   
 
   - name: stg_team
-    description: ""
+    description: "Team metadata"
     columns:
       - name: team_id
         tests:
