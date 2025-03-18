@@ -2,20 +2,25 @@ version: 2
 
 models:
   - name: event
+    description: "Event"
 
   - name: stg_event_type
-    description: ""
+    description: "Event Type"
     columns:
       - name: event_type_id
+        description: "Event Type ID"
         tests:
           - unique
           - not_null
-  
 
   - name: stg_team
-    description: ""
+    description: "FIFA Team"
     columns:
       - name: team_id
+        description: "Team ID"
         tests:
           - unique
           - not_null
+          - relationships:
+              to: source('fifa', 'team')
+              field: id
