@@ -1,0 +1,14 @@
+nullmodels:
+  - name: stg_fifa_player
+    columns:
+      - name: player_id
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+      - name: age
+      - name: weight
+      - name: height
+      - name: city
+      - name: national_team_affiliation_id
+      - name: affiliation_id

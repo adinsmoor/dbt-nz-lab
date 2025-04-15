@@ -1,0 +1,29 @@
+nullversion: 2
+models:
+- name: dim_players
+  description: This model combines player and team information to provide a comprehensive
+    view of players and their affiliations. It is useful for analyzing player-team
+    relationships and understanding player distribution across teams.
+  columns:
+  - name: player_id
+    description: A unique identifier for each player.
+    data_tests:
+      - unique
+      - not_null
+  - name: player_name
+    description: The name of the player.
+    data_tests:
+      - not_null
+  - name: team_id
+    description: A unique identifier for each team.
+    data_tests:
+      - unique
+      - not_null
+  - name: team_name
+    description: The name of the team the player is affiliated with.
+    data_tests:
+      - not_null
+  - name: affiliation_id
+    description: The identifier linking players to their respective teams.
+    data_tests:
+      - not_null
