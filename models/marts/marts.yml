@@ -5,7 +5,47 @@ models:
     columns:
       - name: event_pk
         tests:
-        - not_null
-        - unique
+          - not_null
+          - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
+  - name: dim_players
+    description:
+      This model provides a comprehensive view of players, combining personal
+      details with team affiliations. It integrates player information from the staging
+      player table with team details from the staging team table, offering insights
+      into player demographics and their associated teams.
+    columns:
+      - name: player_id
+        description: A unique identifier for each player.
+        tests:
+          - not_null
+          - unique
+      - name: player_first_name
+        description: The first name of the player.
+      - name: player_middle_name
+        description: The middle name of the player.
+      - name: player_last_name
+        description: The last name of the player.
+      - name: player_known_name
+        description: The name by which the player is commonly known.
+      - name: player_name
+        description: The full name of the player.
+      - name: age
+        description: The age of the player.
+      - name: birth_date
+        description: The birth date of the player.
+      - name: weight
+        description: The weight of the player.
+      - name: height
+        description: The height of the player.
+      - name: city
+        description: The city where the player resides.
+      - name: national_team_affiliation_id
+        description: The identifier for the player's national team affiliation.
+      - name: affiliation_id
+        description: The identifier for the player's team affiliation.
+      - name: team_name
+        description: The name of the team the player is affiliated with.
+      - name: country_code
+        description: The country code representing the player's team location.
